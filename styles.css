@@ -2,180 +2,753 @@
     box-sizing: border-box;
 }
 
+
 body {
+
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f4f6f8;
-    color: #222;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: #f3f4f6;
+
+    color: #1f2937;
+
 }
+
+
+
+/* =========================
+   ENCABEZADO
+   ========================= */
 
 .header {
-    background: #111827;
+
+    background:
+        linear-gradient(
+            135deg,
+            #111827,
+            #1f2937
+        );
+
     color: white;
-    text-align: center;
+
     padding: 25px 15px;
+
 }
+
+
+.header-content {
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 15px;
+
+}
+
+
+.trofeo {
+
+    font-size: 42px;
+
+}
+
 
 .header h1 {
+
     margin: 0;
+
     font-size: 28px;
+
+    letter-spacing: 1px;
+
 }
+
 
 .header p {
-    margin: 5px 0 0;
+
+    margin: 4px 0 0;
+
     font-size: 18px;
+
+    letter-spacing: 3px;
+
 }
+
+
+
+/* =========================
+   MENU
+   ========================= */
 
 .menu {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 8px;
-    padding: 12px;
+
     background: white;
-    border-bottom: 1px solid #ddd;
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    padding: 12px;
+
+    border-bottom:
+        1px solid #e5e7eb;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 10;
+
 }
 
-.menu button,
-.zonas-menu button {
+
+.menu button {
+
     border: none;
+
     background: #2563eb;
+
     color: white;
-    padding: 12px 18px;
+
+    padding: 11px 17px;
+
     border-radius: 8px;
+
     cursor: pointer;
-    font-size: 15px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
 }
 
-.menu button:hover,
-.zonas-menu button:hover {
-    opacity: 0.85;
+
+.menu button:hover {
+
+    background: #1d4ed8;
+
 }
+
+
+
+/* =========================
+   CONTENIDO
+   ========================= */
 
 main {
-    max-width: 1000px;
+
+    max-width: 1100px;
+
     margin: auto;
-    padding: 20px;
+
+    padding: 25px 20px;
+
 }
+
 
 .seccion {
+
     display: none;
+
 }
+
 
 .seccion.activa {
+
     display: block;
+
 }
+
+
+.titulo-seccion {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-bottom: 20px;
+
+}
+
 
 h2 {
+
     margin-top: 0;
+
 }
 
-.zonas-menu {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-bottom: 20px;
+
+h3 {
+
+    margin-top: 0;
+
 }
+
+
+
+/* =========================
+   BOTON ACTUALIZAR
+   ========================= */
+
+.boton-actualizar {
+
+    border: none;
+
+    background: #16a34a;
+
+    color: white;
+
+    padding: 10px 15px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+}
+
+
+
+/* =========================
+   TARJETAS
+   ========================= */
 
 .card {
+
     background: white;
+
     border-radius: 12px;
+
     padding: 18px;
+
     margin-bottom: 15px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+
+    box-shadow:
+        0 2px 8px rgba(0,0,0,0.08);
+
 }
+
+
+.card-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 12px;
+
+}
+
+
+.badge {
+
+    background: #dbeafe;
+
+    color: #1d4ed8;
+
+    padding: 5px 9px;
+
+    border-radius: 6px;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+}
+
+
+
+/* =========================
+   PARTIDOS
+   ========================= */
 
 .partido {
+
     text-align: center;
+
 }
 
-.partido .parejas {
+
+.parejas {
+
     font-size: 18px;
+
     font-weight: bold;
+
 }
 
-.partido .vs {
+
+.vs {
+
     margin: 10px 0;
-    color: #666;
+
+    color: #6b7280;
+
+    font-weight: bold;
+
 }
+
 
 .info {
+
     display: flex;
-    justify-content: space-around;
+
+    justify-content: center;
+
     flex-wrap: wrap;
+
+    gap: 8px;
+
     margin-top: 15px;
-    gap: 10px;
+
 }
+
 
 .info span {
+
     background: #f1f5f9;
+
     padding: 8px 12px;
+
     border-radius: 6px;
+
+    font-size: 14px;
+
 }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-    background: white;
+
+.resultado {
+
+    margin-top: 15px;
+
+    padding: 10px;
+
+    background: #ecfdf5;
+
+    color: #166534;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+
 }
+
+
+
+/* =========================
+   ZONAS
+   ========================= */
+
+.zonas-menu {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 12px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.zona-button {
+
+    border: none;
+
+    padding: 15px;
+
+    border-radius: 10px;
+
+    background: #2563eb;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+}
+
+
+.zona-button:hover {
+
+    background: #1d4ed8;
+
+}
+
+
+.lista-zona {
+
+    margin-bottom: 25px;
+
+}
+
+
+.pareja-zona {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 12px;
+
+    border-bottom:
+        1px solid #e5e7eb;
+
+}
+
+
+
+/* =========================
+   POSICIONES
+   ========================= */
+
+.tabla-container {
+
+    overflow-x: auto;
+
+    background: white;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 2px 8px rgba(0,0,0,0.08);
+
+    margin-bottom: 25px;
+
+}
+
+
+table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+}
+
 
 th,
 td {
-    padding: 12px;
-    border-bottom: 1px solid #ddd;
+
+    padding: 11px 8px;
+
+    border-bottom:
+        1px solid #e5e7eb;
+
     text-align: center;
+
 }
+
 
 th {
+
     background: #111827;
+
     color: white;
+
+    font-size: 13px;
+
 }
+
+
+td {
+
+    font-size: 14px;
+
+}
+
+
+.clasifica {
+
+    background: #ecfdf5;
+
+}
+
+
+.posicion {
+
+    font-weight: bold;
+
+}
+
+
+
+/* =========================
+   ELIMINATORIAS
+   ========================= */
+
+.ronda {
+
+    margin-bottom: 30px;
+
+}
+
+
+.ronda h3 {
+
+    background: #111827;
+
+    color: white;
+
+    padding: 12px;
+
+    border-radius: 8px;
+
+}
+
+
+.eliminatoria-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 15px;
+
+}
+
+
+.eliminatoria {
+
+    background: white;
+
+    border-radius: 12px;
+
+    padding: 18px;
+
+    box-shadow:
+        0 2px 8px rgba(0,0,0,0.08);
+
+    text-align: center;
+
+}
+
+
+.eliminatoria-nombre {
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    color: #6b7280;
+
+    margin-bottom: 12px;
+
+}
+
+
+.eliminatoria-pareja {
+
+    padding: 10px;
+
+    background: #f8fafc;
+
+    border-radius: 7px;
+
+    margin: 5px 0;
+
+    font-weight: bold;
+
+}
+
+
+.eliminatoria-vs {
+
+    color: #6b7280;
+
+    font-weight: bold;
+
+}
+
+
+.cam-peon {
+
+    text-align: center;
+
+    padding: 25px;
+
+    background: white;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 2px 8px rgba(0,0,0,0.08);
+
+}
+
+
+.cam-peon .trofeo-final {
+
+    font-size: 55px;
+
+}
+
+
+
+/* =========================
+   FOOTER
+   ========================= */
 
 footer {
+
     text-align: center;
-    padding: 25px;
-    color: #666;
+
+    padding: 30px;
+
+    color: #6b7280;
+
+    font-size: 14px;
+
 }
 
 
-/* CELULAR */
 
-@media (max-width: 600px) {
+/* =========================
+   CELULAR
+   ========================= */
+
+@media (max-width: 700px) {
+
+
+    .header {
+
+        padding: 18px 10px;
+
+    }
+
 
     .header h1 {
-        font-size: 23px;
+
+        font-size: 21px;
+
     }
+
+
+    .header p {
+
+        font-size: 14px;
+
+    }
+
+
+    .trofeo {
+
+        font-size: 32px;
+
+    }
+
 
     .menu {
+
         display: grid;
-        grid-template-columns: 1fr 1fr;
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 6px;
+
     }
+
 
     .menu button {
+
         width: 100%;
-        font-size: 14px;
+
         padding: 12px 5px;
+
+        font-size: 13px;
+
     }
+
 
     main {
-        padding: 12px;
+
+        padding: 18px 12px;
+
     }
 
-    .card {
-        padding: 14px;
+
+    .titulo-seccion {
+
+        align-items: stretch;
+
+        flex-direction: column;
+
     }
 
-    .partido .parejas {
+
+    .zonas-menu {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    .eliminatoria-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .parejas {
+
         font-size: 16px;
+
     }
+
+
+    .info span {
+
+        width: 100%;
+
+    }
+
 
     table {
-        font-size: 13px;
+
+        min-width: 650px;
+
     }
 
-    th,
-    td {
-        padding: 8px 4px;
+
+    .tabla-container {
+
+        overflow-x: auto;
+
     }
 
 }
