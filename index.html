@@ -1,107 +1,238 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <title>Torneo de Pádel de Bowen</title>
 
-    <link rel="stylesheet" href="styles.css">
+    <link
+        rel="stylesheet"
+        href="styles.css"
+    >
+
 </head>
+
 
 <body>
 
+
 <header class="header">
+
     <div class="header-content">
-        <h1>🏆 Torneo de Pádel</h1>
-        <p>De Bowen</p>
+
+        <div class="trofeo">
+            🏆
+        </div>
+
+        <div>
+
+            <h1>
+                TORNEO DE PÁDEL
+            </h1>
+
+            <p>
+                DE BOWEN
+            </p>
+
+        </div>
+
     </div>
+
 </header>
 
+
 <nav class="menu">
-    <button onclick="mostrarSeccion('inicio')">🏠 Inicio</button>
-    <button onclick="mostrarSeccion('zonas')">🟢 Zonas</button>
-    <button onclick="mostrarSeccion('parejas')">👥 Parejas</button>
-    <button onclick="mostrarSeccion('partidos')">🎾 Partidos</button>
-    <button onclick="mostrarSeccion('posiciones')">📊 Posiciones</button>
-    <button onclick="mostrarSeccion('eliminatorias')">🏆 Eliminatorias</button>
+
+    <button onclick="mostrarSeccion('inicio')">
+        🏠 Inicio
+    </button>
+
+    <button onclick="mostrarSeccion('zonas')">
+        🟢 Zonas
+    </button>
+
+    <button onclick="mostrarSeccion('parejas')">
+        👥 Parejas
+    </button>
+
+    <button onclick="mostrarSeccion('partidos')">
+        🎾 Partidos
+    </button>
+
+    <button onclick="mostrarSeccion('posiciones')">
+        📊 Posiciones
+    </button>
+
+    <button onclick="mostrarSeccion('eliminatorias')">
+        🏆 Eliminatorias
+    </button>
+
 </nav>
+
 
 <main>
 
-    <section id="inicio" class="seccion activa">
 
-        <h2>Próximos partidos</h2>
+    <!-- INICIO -->
+
+    <section
+        id="inicio"
+        class="seccion activa"
+    >
+
+        <div class="titulo-seccion">
+
+            <h2>
+                Próximos partidos
+            </h2>
+
+            <button
+                class="boton-actualizar"
+                onclick="actualizarPagina()"
+            >
+                🔄 Actualizar
+            </button>
+
+        </div>
+
 
         <div id="proximos-partidos"></div>
 
     </section>
 
 
-    <section id="zonas" class="seccion">
 
-        <h2>Zonas</h2>
+    <!-- ZONAS -->
 
-        <div class="zonas-menu">
+    <section
+        id="zonas"
+        class="seccion"
+    >
 
-            <button onclick="mostrarZona('A')">Zona A</button>
-            <button onclick="mostrarZona('B')">Zona B</button>
-            <button onclick="mostrarZona('C')">Zona C</button>
-            <button onclick="mostrarZona('D')">Zona D</button>
-
-        </div>
-
-        <div id="zona-contenido"></div>
-
-    </section>
+        <h2>
+            🟢 Zonas
+        </h2>
 
 
-    <section id="parejas" class="seccion">
-
-        <h2>👥 Parejas</h2>
-
-        <div id="lista-parejas"></div>
-
-    </section>
+        <div
+            id="botones-zonas"
+            class="zonas-menu"
+        ></div>
 
 
-    <section id="partidos" class="seccion">
-
-        <h2>🎾 Partidos</h2>
-
-        <div id="lista-partidos"></div>
+        <div
+            id="zona-contenido"
+        ></div>
 
     </section>
 
 
-    <section id="posiciones" class="seccion">
 
-        <h2>📊 Posiciones</h2>
+    <!-- PAREJAS -->
 
-        <div id="tabla-posiciones"></div>
+    <section
+        id="parejas"
+        class="seccion"
+    >
+
+        <h2>
+            👥 Parejas
+        </h2>
+
+
+        <div
+            id="lista-parejas"
+        ></div>
 
     </section>
 
 
-    <section id="eliminatorias" class="seccion">
 
-        <h2>🏆 Eliminatorias</h2>
+    <!-- PARTIDOS -->
 
-        <div id="eliminatorias-contenido"></div>
+    <section
+        id="partidos"
+        class="seccion"
+    >
+
+        <h2>
+            🎾 Partidos
+        </h2>
+
+
+        <div
+            id="lista-partidos"
+        ></div>
 
     </section>
+
+
+
+    <!-- POSICIONES -->
+
+    <section
+        id="posiciones"
+        class="seccion"
+    >
+
+        <h2>
+            📊 Posiciones
+        </h2>
+
+
+        <div
+            id="tabla-posiciones"
+        ></div>
+
+    </section>
+
+
+
+    <!-- ELIMINATORIAS -->
+
+    <section
+        id="eliminatorias"
+        class="seccion"
+    >
+
+        <h2>
+            🏆 Eliminatorias
+        </h2>
+
+
+        <div
+            id="eliminatorias-contenido"
+        ></div>
+
+    </section>
+
 
 </main>
 
 
 <footer>
 
-    <p>Torneo de Pádel de Bowen</p>
+    <p>
+        Torneo de Pádel de Bowen
+    </p>
+
+    <p>
+        Información del torneo
+    </p>
 
 </footer>
 
 
 <script src="app.js"></script>
 
+
 </body>
+
 </html>
