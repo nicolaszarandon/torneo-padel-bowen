@@ -120,7 +120,7 @@ const parejas = [
 
 
 /* ==========================================
-   PARTIDOS
+   PARTIDOS DE ZONA
    ========================================== */
 
 const partidos = [
@@ -321,23 +321,17 @@ function mostrarPartido(partido) {
 
 
             <div class="parejas">
-
                 ${partido.pareja1}
-
             </div>
 
 
             <div class="vs">
-
                 VS
-
             </div>
 
 
             <div class="parejas">
-
                 ${partido.pareja2}
-
             </div>
 
 
@@ -525,9 +519,7 @@ function cargarBotonesZonas() {
                     class="zona-button"
                     onclick="mostrarZona('${zona}')"
                 >
-
                     Zona ${zona}
-
                 </button>
 
             `;
@@ -659,37 +651,14 @@ function cargarPosiciones() {
 
                             <tr>
 
-                                <th>
-                                    Pos.
-                                </th>
-
-                                <th>
-                                    Pareja
-                                </th>
-
-                                <th>
-                                    PJ
-                                </th>
-
-                                <th>
-                                    PG
-                                </th>
-
-                                <th>
-                                    PP
-                                </th>
-
-                                <th>
-                                    Sets
-                                </th>
-
-                                <th>
-                                    Juegos
-                                </th>
-
-                                <th>
-                                    Pts.
-                                </th>
+                                <th>Pos.</th>
+                                <th>Pareja</th>
+                                <th>PJ</th>
+                                <th>PG</th>
+                                <th>PP</th>
+                                <th>Sets</th>
+                                <th>Juegos</th>
+                                <th>Pts.</th>
 
                             </tr>
 
@@ -715,9 +684,7 @@ function cargarPosiciones() {
                                 }"
                             >
 
-                                <td
-                                    class="posicion"
-                                >
+                                <td class="posicion">
                                     ${index + 1}
                                 </td>
 
@@ -725,29 +692,17 @@ function cargarPosiciones() {
                                     ${pareja.nombre}
                                 </td>
 
-                                <td>
-                                    0
-                                </td>
+                                <td>0</td>
 
-                                <td>
-                                    0
-                                </td>
+                                <td>0</td>
 
-                                <td>
-                                    0
-                                </td>
+                                <td>0</td>
 
-                                <td>
-                                    0
-                                </td>
+                                <td>0</td>
 
-                                <td>
-                                    0
-                                </td>
+                                <td>0</td>
 
-                                <td>
-                                    0
-                                </td>
+                                <td>0</td>
 
                             </tr>
 
@@ -777,6 +732,72 @@ function cargarPosiciones() {
 
 
 /* ==========================================
+   TARJETA DE ELIMINATORIA
+   ========================================== */
+
+function tarjetaEliminatoria(
+    nombre,
+    pareja1,
+    pareja2,
+    fecha = "Pendiente",
+    hora = "Pendiente",
+    cancha = "Pendiente"
+) {
+
+    return `
+
+        <div class="eliminatoria">
+
+            <div class="eliminatoria-nombre">
+                ${nombre}
+            </div>
+
+
+            <div class="eliminatoria-pareja">
+                ${pareja1}
+            </div>
+
+
+            <div class="eliminatoria-vs">
+                VS
+            </div>
+
+
+            <div class="eliminatoria-pareja">
+                ${pareja2}
+            </div>
+
+
+            <div class="info">
+
+                <span>
+                    📅 ${fecha}
+                </span>
+
+                <span>
+                    🕐 ${hora}
+                </span>
+
+                <span>
+                    🎾 ${cancha}
+                </span>
+
+            </div>
+
+
+            <div class="resultado-eliminatoria">
+                Resultado: Pendiente
+            </div>
+
+        </div>
+
+    `;
+
+}
+
+
+
+/* ==========================================
    ELIMINATORIAS
    ========================================== */
 
@@ -791,152 +812,59 @@ function cargarEliminatorias() {
     contenedor.innerHTML = `
 
 
-        <!-- CUARTOS -->
+        <!-- ==================================
+             OCTAVOS DE FINAL
+             ================================== -->
 
         <div class="ronda">
 
             <h3>
-                🏆 Cuartos de final
+                🏆 Octavos de final
             </h3>
+
+
+            <p class="descripcion-ronda">
+
+                Las parejas clasificadas en
+                2° y 3° lugar de cada zona
+                disputan los octavos de final.
+
+                Las parejas que terminaron
+                1° en cada zona pasan
+                directamente a cuartos.
+
+            </p>
 
 
             <div class="eliminatoria-grid">
 
 
-                <div class="eliminatoria">
-
-                    <div class="eliminatoria-nombre">
-                        CUARTOS 1
-                    </div>
-
-                    <div class="eliminatoria-pareja">
-                        1° Zona A
-                    </div>
-
-                    <div class="eliminatoria-vs">
-                        VS
-                    </div>
-
-                    <div class="eliminatoria-pareja">
-                        2° Zona B
-                    </div>
-
-                    <div class="info">
-
-                        <span>
-                            📅 Pendiente
-                        </span>
-
-                        <span>
-                            🎾 Pendiente
-                        </span>
-
-                    </div>
-
-                </div>
+                ${tarjetaEliminatoria(
+                    "OCTAVOS 1",
+                    "2° Zona A",
+                    "3° Zona D"
+                )}
 
 
-
-                <div class="eliminatoria">
-
-                    <div class="eliminatoria-nombre">
-                        CUARTOS 2
-                    </div>
-
-                    <div class="eliminatoria-pareja">
-                        1° Zona B
-                    </div>
-
-                    <div class="eliminatoria-vs">
-                        VS
-                    </div>
-
-                    <div class="eliminatoria-pareja">
-                        2° Zona A
-                    </div>
-
-                    <div class="info">
-
-                        <span>
-                            📅 Pendiente
-                        </span>
-
-                        <span>
-                            🎾 Pendiente
-                        </span>
-
-                    </div>
-
-                </div>
+                ${tarjetaEliminatoria(
+                    "OCTAVOS 2",
+                    "2° Zona B",
+                    "3° Zona C"
+                )}
 
 
-
-                <div class="eliminatoria">
-
-                    <div class="eliminatoria-nombre">
-                        CUARTOS 3
-                    </div>
-
-                    <div class="eliminatoria-pareja">
-                        1° Zona C
-                    </div>
-
-                    <div class="eliminatoria-vs">
-                        VS
-                    </div>
-
-                    <div class="eliminatoria-pareja">
-                        2° Zona D
-                    </div>
-
-                    <div class="info">
-
-                        <span>
-                            📅 Pendiente
-                        </span>
-
-                        <span>
-                            🎾 Pendiente
-                        </span>
-
-                    </div>
-
-                </div>
+                ${tarjetaEliminatoria(
+                    "OCTAVOS 3",
+                    "2° Zona C",
+                    "3° Zona B"
+                )}
 
 
-
-                <div class="eliminatoria">
-
-                    <div class="eliminatoria-nombre">
-                        CUARTOS 4
-                    </div>
-
-                    <div class="eliminatoria-pareja">
-                        1° Zona D
-                    </div>
-
-                    <div class="eliminatoria-vs">
-                        VS
-                    </div>
-
-                    <div class="eliminatoria-pareja">
-                        2° Zona C
-                    </div>
-
-                    <div class="info">
-
-                        <span>
-                            📅 Pendiente
-                        </span>
-
-                        <span>
-                            🎾 Pendiente
-                        </span>
-
-                    </div>
-
-                </div>
-
+                ${tarjetaEliminatoria(
+                    "OCTAVOS 4",
+                    "2° Zona D",
+                    "3° Zona A"
+                )}
 
             </div>
 
@@ -944,7 +872,56 @@ function cargarEliminatorias() {
 
 
 
-        <!-- SEMIFINALES -->
+        <!-- ==================================
+             CUARTOS DE FINAL
+             ================================== -->
+
+        <div class="ronda">
+
+            <h3>
+                🥇 Cuartos de final
+            </h3>
+
+
+            <div class="eliminatoria-grid">
+
+
+                ${tarjetaEliminatoria(
+                    "CUARTOS 1",
+                    "1° Zona A",
+                    "GANADOR OCTAVOS 1"
+                )}
+
+
+                ${tarjetaEliminatoria(
+                    "CUARTOS 2",
+                    "1° Zona B",
+                    "GANADOR OCTAVOS 2"
+                )}
+
+
+                ${tarjetaEliminatoria(
+                    "CUARTOS 3",
+                    "1° Zona C",
+                    "GANADOR OCTAVOS 3"
+                )}
+
+
+                ${tarjetaEliminatoria(
+                    "CUARTOS 4",
+                    "1° Zona D",
+                    "GANADOR OCTAVOS 4"
+                )}
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ==================================
+             SEMIFINALES
+             ================================== -->
 
         <div class="ronda">
 
@@ -956,48 +933,18 @@ function cargarEliminatorias() {
             <div class="eliminatoria-grid">
 
 
-                <div class="eliminatoria">
-
-                    <div class="eliminatoria-nombre">
-                        SEMIFINAL 1
-                    </div>
-
-                    <div class="eliminatoria-pareja">
-                        GANADOR QF1
-                    </div>
-
-                    <div class="eliminatoria-vs">
-                        VS
-                    </div>
-
-                    <div class="eliminatoria-pareja">
-                        GANADOR QF3
-                    </div>
-
-                </div>
+                ${tarjetaEliminatoria(
+                    "SEMIFINAL 1",
+                    "GANADOR CUARTOS 1",
+                    "GANADOR CUARTOS 3"
+                )}
 
 
-
-                <div class="eliminatoria">
-
-                    <div class="eliminatoria-nombre">
-                        SEMIFINAL 2
-                    </div>
-
-                    <div class="eliminatoria-pareja">
-                        GANADOR QF2
-                    </div>
-
-                    <div class="eliminatoria-vs">
-                        VS
-                    </div>
-
-                    <div class="eliminatoria-pareja">
-                        GANADOR QF4
-                    </div>
-
-                </div>
-
+                ${tarjetaEliminatoria(
+                    "SEMIFINAL 2",
+                    "GANADOR CUARTOS 2",
+                    "GANADOR CUARTOS 4"
+                )}
 
             </div>
 
@@ -1005,7 +952,9 @@ function cargarEliminatorias() {
 
 
 
-        <!-- FINAL -->
+        <!-- ==================================
+             FINAL
+             ================================== -->
 
         <div class="ronda">
 
@@ -1014,51 +963,19 @@ function cargarEliminatorias() {
             </h3>
 
 
-            <div class="eliminatoria">
-
-                <div class="eliminatoria-nombre">
-                    FINAL
-                </div>
-
-
-                <div class="eliminatoria-pareja">
-                    GANADOR SF1
-                </div>
-
-
-                <div class="eliminatoria-vs">
-                    VS
-                </div>
-
-
-                <div class="eliminatoria-pareja">
-                    GANADOR SF2
-                </div>
-
-
-                <div class="info">
-
-                    <span>
-                        📅 Pendiente
-                    </span>
-
-                    <span>
-                        🕐 Pendiente
-                    </span>
-
-                    <span>
-                        🎾 Pendiente
-                    </span>
-
-                </div>
-
-            </div>
+            ${tarjetaEliminatoria(
+                "FINAL",
+                "GANADOR SEMIFINAL 1",
+                "GANADOR SEMIFINAL 2"
+            )}
 
         </div>
 
 
 
-        <!-- CAMPEÓN -->
+        <!-- ==================================
+             CAMPEÓN
+             ================================== -->
 
         <div class="cam-peon">
 
