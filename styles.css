@@ -1,48 +1,46 @@
+/* ==========================================
+   CONFIGURACIÓN GENERAL
+   ========================================== */
+
 * {
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
 
 body {
-
     margin: 0;
-
-    font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
-
-    background: #f3f4f6;
-
-    color: #1f2937;
-
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f3f6f9;
+    color: #1f2933;
 }
 
 
-
-/* =========================
-   ENCABEZADO
-   ========================= */
+/* ==========================================
+   HEADER
+   ========================================== */
 
 .header {
-
-    background:
-        linear-gradient(
-            135deg,
-            #111827,
-            #1f2937
-        );
+    background: linear-gradient(
+        135deg,
+        #111827,
+        #1f2937
+    );
 
     color: white;
 
     padding: 25px 15px;
 
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 
 .header-content {
-
-    max-width: 1100px;
+    max-width: 1200px;
 
     margin: auto;
 
@@ -52,205 +50,311 @@ body {
 
     justify-content: center;
 
-    gap: 15px;
+    gap: 18px;
 
+    text-align: center;
 }
 
 
 .trofeo {
-
-    font-size: 42px;
-
+    font-size: 48px;
 }
 
 
 .header h1 {
-
     margin: 0;
 
-    font-size: 28px;
+    font-size: 30px;
 
     letter-spacing: 1px;
-
 }
 
 
 .header p {
+    margin: 5px 0 0;
 
-    margin: 4px 0 0;
+    font-size: 20px;
 
-    font-size: 18px;
+    font-weight: bold;
 
-    letter-spacing: 3px;
-
+    letter-spacing: 2px;
 }
 
 
-
-/* =========================
-   MENU
-   ========================= */
+/* ==========================================
+   MENÚ
+   ========================================== */
 
 .menu {
+    position: sticky;
+
+    top: 0;
+
+    z-index: 100;
 
     background: white;
+
+    border-bottom: 1px solid #ddd;
+
+    box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.08);
+
+    padding: 10px;
 
     display: flex;
 
     justify-content: center;
 
-    flex-wrap: wrap;
-
     gap: 8px;
 
-    padding: 12px;
-
-    border-bottom:
-        1px solid #e5e7eb;
-
-    position: sticky;
-
-    top: 0;
-
-    z-index: 10;
-
+    flex-wrap: wrap;
 }
 
 
 .menu button {
+    border: none;
 
+    background: #eef2f5;
+
+    color: #1f2933;
+
+    padding: 10px 15px;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s,
+        transform 0.2s;
+}
+
+
+.menu button:hover {
+    background: #dce4ea;
+
+    transform: translateY(-1px);
+}
+
+
+.menu button:active {
+    transform: scale(0.97);
+}
+
+
+/* ==========================================
+   CONTENIDO PRINCIPAL
+   ========================================== */
+
+main {
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 25px 15px 50px;
+}
+
+
+.seccion {
+    display: none;
+}
+
+
+.seccion.activa {
+    display: block;
+}
+
+
+h2 {
+    margin-top: 0;
+
+    margin-bottom: 20px;
+
+    color: #111827;
+}
+
+
+h3 {
+    color: #1f2937;
+
+    margin-top: 25px;
+
+    margin-bottom: 15px;
+}
+
+
+/* ==========================================
+   TÍTULO DE SECCIÓN
+   ========================================== */
+
+.titulo-seccion {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 20px;
+}
+
+
+.titulo-seccion h2 {
+    margin: 0;
+}
+
+
+/* ==========================================
+   BOTÓN ACTUALIZAR
+   ========================================== */
+
+.boton-actualizar {
     border: none;
 
     background: #2563eb;
 
     color: white;
 
-    padding: 11px 17px;
+    padding: 10px 16px;
 
     border-radius: 8px;
 
-    cursor: pointer;
-
-    font-size: 14px;
-
     font-weight: bold;
 
+    cursor: pointer;
+
+    transition:
+        background 0.2s,
+        transform 0.2s;
 }
 
 
-.menu button:hover {
-
+.boton-actualizar:hover {
     background: #1d4ed8;
 
+    transform: translateY(-1px);
 }
 
 
-
-/* =========================
-   CONTENIDO
-   ========================= */
-
-main {
-
-    max-width: 1100px;
-
-    margin: auto;
-
-    padding: 25px 20px;
-
-}
-
-
-.seccion {
-
-    display: none;
-
-}
-
-
-.seccion.activa {
-
-    display: block;
-
-}
-
-
-.titulo-seccion {
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: space-between;
-
-    gap: 15px;
-
-    margin-bottom: 20px;
-
-}
-
-
-h2 {
-
-    margin-top: 0;
-
-}
-
-
-h3 {
-
-    margin-top: 0;
-
-}
-
-
-
-/* =========================
-   BOTON ACTUALIZAR
-   ========================= */
-
-.boton-actualizar {
-
-    border: none;
-
-    background: #16a34a;
-
-    color: white;
-
-    padding: 10px 15px;
-
-    border-radius: 8px;
-
-    cursor: pointer;
-
-    font-weight: bold;
-
-}
-
-
-
-/* =========================
-   TARJETAS
-   ========================= */
+/* ==========================================
+   CARDS
+   ========================================== */
 
 .card {
-
     background: white;
 
     border-radius: 12px;
 
-    padding: 18px;
+    padding: 20px;
 
-    margin-bottom: 15px;
+    margin-bottom: 18px;
 
     box-shadow:
-        0 2px 8px rgba(0,0,0,0.08);
+        0 3px 10px rgba(0, 0, 0, 0.08);
 
+    border: 1px solid #e5e7eb;
+}
+
+
+/* ==========================================
+   PARTIDOS
+   ========================================== */
+
+.partido {
+    text-align: center;
 }
 
 
 .card-header {
+    display: flex;
 
+    justify-content: center;
+
+    margin-bottom: 15px;
+}
+
+
+.badge {
+    background: #16a34a;
+
+    color: white;
+
+    padding: 6px 12px;
+
+    border-radius: 20px;
+
+    font-size: 13px;
+
+    font-weight: bold;
+}
+
+
+.parejas {
+    font-size: 18px;
+
+    font-weight: bold;
+
+    margin: 8px 0;
+}
+
+
+.vs {
+    font-size: 13px;
+
+    color: #6b7280;
+
+    font-weight: bold;
+
+    margin: 5px 0;
+}
+
+
+.info {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 15px;
+
+    margin-top: 18px;
+
+    padding-top: 12px;
+
+    border-top: 1px solid #e5e7eb;
+
+    color: #4b5563;
+
+    font-size: 14px;
+}
+
+
+.resultado {
+    margin-top: 15px;
+
+    padding: 10px;
+
+    background: #f3f4f6;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+}
+
+
+/* ==========================================
+   PAREJAS
+   ========================================== */
+
+.pareja-zona {
     display: flex;
 
     justify-content: space-between;
@@ -259,112 +363,34 @@ h3 {
 
     gap: 10px;
 
-    margin-bottom: 12px;
+    padding: 12px 0;
 
+    border-bottom: 1px solid #e5e7eb;
 }
 
 
-.badge {
-
-    background: #dbeafe;
-
-    color: #1d4ed8;
-
-    padding: 5px 9px;
-
-    border-radius: 6px;
-
-    font-size: 12px;
-
-    font-weight: bold;
-
+.pareja-zona:last-child {
+    border-bottom: none;
 }
 
 
-
-/* =========================
-   PARTIDOS
-   ========================= */
-
-.partido {
-
-    text-align: center;
-
+.pareja-zona strong {
+    color: #111827;
 }
 
 
-.parejas {
-
-    font-size: 18px;
-
-    font-weight: bold;
-
-}
-
-
-.vs {
-
-    margin: 10px 0;
-
+.pareja-zona span {
     color: #6b7280;
 
-    font-weight: bold;
-
+    font-size: 13px;
 }
 
 
-.info {
-
-    display: flex;
-
-    justify-content: center;
-
-    flex-wrap: wrap;
-
-    gap: 8px;
-
-    margin-top: 15px;
-
-}
-
-
-.info span {
-
-    background: #f1f5f9;
-
-    padding: 8px 12px;
-
-    border-radius: 6px;
-
-    font-size: 14px;
-
-}
-
-
-.resultado {
-
-    margin-top: 15px;
-
-    padding: 10px;
-
-    background: #ecfdf5;
-
-    color: #166534;
-
-    border-radius: 8px;
-
-    font-weight: bold;
-
-}
-
-
-
-/* =========================
+/* ==========================================
    ZONAS
-   ========================= */
+   ========================================== */
 
 .zonas-menu {
-
     display: grid;
 
     grid-template-columns:
@@ -373,382 +399,632 @@ h3 {
     gap: 12px;
 
     margin-bottom: 20px;
-
 }
 
 
 .zona-button {
-
     border: none;
 
-    padding: 15px;
-
-    border-radius: 10px;
-
-    background: #2563eb;
+    background: #16a34a;
 
     color: white;
 
-    font-size: 16px;
+    padding: 13px;
+
+    border-radius: 9px;
+
+    font-size: 15px;
 
     font-weight: bold;
 
     cursor: pointer;
 
+    transition:
+        background 0.2s,
+        transform 0.2s;
 }
 
 
 .zona-button:hover {
+    background: #15803d;
 
-    background: #1d4ed8;
-
+    transform: translateY(-1px);
 }
 
 
-.lista-zona {
-
-    margin-bottom: 25px;
-
-}
-
-
-.pareja-zona {
-
-    display: flex;
-
-    justify-content: space-between;
-
-    align-items: center;
-
-    padding: 12px;
-
-    border-bottom:
-        1px solid #e5e7eb;
-
-}
-
-
-
-/* =========================
-   POSICIONES
-   ========================= */
+/* ==========================================
+   TABLAS
+   ========================================== */
 
 .tabla-container {
+    width: 100%;
 
     overflow-x: auto;
 
     background: white;
 
-    border-radius: 12px;
+    border-radius: 10px;
 
     box-shadow:
-        0 2px 8px rgba(0,0,0,0.08);
+        0 3px 10px rgba(0, 0, 0, 0.07);
 
     margin-bottom: 25px;
-
 }
 
 
 table {
-
     width: 100%;
 
     border-collapse: collapse;
 
-}
-
-
-th,
-td {
-
-    padding: 11px 8px;
-
-    border-bottom:
-        1px solid #e5e7eb;
-
-    text-align: center;
-
+    min-width: 650px;
 }
 
 
 th {
-
-    background: #111827;
+    background: #1f2937;
 
     color: white;
 
-    font-size: 13px;
+    padding: 12px 10px;
 
+    text-align: center;
+
+    font-size: 14px;
 }
 
 
 td {
+    padding: 12px 10px;
+
+    border-bottom: 1px solid #e5e7eb;
+
+    text-align: center;
 
     font-size: 14px;
+}
 
+
+tr:last-child td {
+    border-bottom: none;
 }
 
 
 .clasifica {
-
     background: #ecfdf5;
-
 }
 
 
 .posicion {
-
     font-weight: bold;
-
 }
 
 
-
-/* =========================
+/* ==========================================
    ELIMINATORIAS
-   ========================= */
+   ========================================== */
 
 .ronda {
-
-    margin-bottom: 30px;
-
+    margin-bottom: 35px;
 }
 
 
 .ronda h3 {
+    text-align: center;
 
-    background: #111827;
+    margin-bottom: 20px;
 
-    color: white;
-
-    padding: 12px;
-
-    border-radius: 8px;
-
+    font-size: 22px;
 }
 
 
-.eliminatoria-grid {
+/* ==========================================
+   GRID DE ELIMINATORIAS
+   ========================================== */
 
+.eliminatoria-grid {
     display: grid;
 
     grid-template-columns:
-        repeat(2, 1fr);
+        repeat(4, 1fr);
 
-    gap: 15px;
+    gap: 18px;
 
+    align-items: start;
 }
 
 
-.eliminatoria {
+/* ==========================================
+   TARJETA ELIMINATORIA
+   ========================================== */
 
+.eliminatoria {
     background: white;
 
     border-radius: 12px;
 
     padding: 18px;
 
-    box-shadow:
-        0 2px 8px rgba(0,0,0,0.08);
-
     text-align: center;
 
+    border: 1px solid #e5e7eb;
+
+    box-shadow:
+        0 3px 10px rgba(0, 0, 0, 0.08);
+
+    min-width: 0;
 }
 
 
 .eliminatoria-nombre {
-
     font-size: 13px;
 
     font-weight: bold;
 
-    color: #6b7280;
+    color: #2563eb;
 
-    margin-bottom: 12px;
-
+    margin-bottom: 15px;
 }
 
 
 .eliminatoria-pareja {
+    background: #f3f4f6;
 
-    padding: 10px;
+    border-radius: 8px;
 
-    background: #f8fafc;
-
-    border-radius: 7px;
-
-    margin: 5px 0;
+    padding: 12px 8px;
 
     font-weight: bold;
 
+    min-height: 45px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    word-break: break-word;
 }
 
 
 .eliminatoria-vs {
+    padding: 8px 0;
 
-    color: #6b7280;
+    font-size: 12px;
 
     font-weight: bold;
 
+    color: #6b7280;
 }
 
 
-.cam-peon {
+/* ==========================================
+   INFO DE ELIMINATORIA
+   ========================================== */
 
-    text-align: center;
+.eliminatoria .info {
+    flex-direction: column;
 
-    padding: 25px;
+    gap: 7px;
 
-    background: white;
+    margin-top: 15px;
+
+    font-size: 13px;
+
+    border-top: 1px solid #e5e7eb;
+
+    padding-top: 12px;
+}
+
+
+/* ==========================================
+   OCTAVOS
+   ========================================== */
+
+.ronda-octavos {
+    margin-bottom: 40px;
+}
+
+
+.ronda-octavos .eliminatoria-grid {
+    grid-template-columns:
+        repeat(4, 1fr);
+}
+
+
+.octavos-directo {
+    background: #eff6ff;
+
+    border: 1px solid #bfdbfe;
 
     border-radius: 12px;
 
-    box-shadow:
-        0 2px 8px rgba(0,0,0,0.08);
-
-}
-
-
-.cam-peon .trofeo-final {
-
-    font-size: 55px;
-
-}
-
-
-
-/* =========================
-   FOOTER
-   ========================= */
-
-footer {
+    padding: 18px;
 
     text-align: center;
 
-    padding: 30px;
-
-    color: #6b7280;
-
-    font-size: 14px;
-
+    margin-top: 20px;
 }
 
 
+.octavos-directo h4 {
+    margin: 0 0 8px;
 
-/* =========================
-   CELULAR
-   ========================= */
+    color: #1d4ed8;
 
-@media (max-width: 700px) {
-
-
-    .header {
-
-        padding: 18px 10px;
-
-    }
+    font-size: 16px;
+}
 
 
-    .header h1 {
+.octavos-directo p {
+    margin: 0;
 
-        font-size: 21px;
+    color: #374151;
 
-    }
-
-
-    .header p {
-
-        font-size: 14px;
-
-    }
+    font-size: 14px;
+}
 
 
-    .trofeo {
+/* ==========================================
+   CUARTOS
+   ========================================== */
 
-        font-size: 32px;
+.ronda-cuartos .eliminatoria-grid {
+    grid-template-columns:
+        repeat(4, 1fr);
+}
 
-    }
+
+/* ==========================================
+   SEMIFINALES
+   ========================================== */
+
+.ronda-semifinales .eliminatoria-grid {
+    grid-template-columns:
+        repeat(2, minmax(250px, 1fr));
+
+    max-width: 850px;
+
+    margin: auto;
+}
 
 
-    .menu {
+/* ==========================================
+   FINAL
+   ========================================== */
 
-        display: grid;
+.ronda-final {
+    max-width: 500px;
 
+    margin-left: auto;
+
+    margin-right: auto;
+}
+
+
+.ronda-final .eliminatoria {
+    border: 2px solid #f59e0b;
+}
+
+
+.ronda-final .eliminatoria-nombre {
+    color: #d97706;
+
+    font-size: 16px;
+}
+
+
+/* ==========================================
+   CAMPEÓN
+   ========================================== */
+
+.cam-peon {
+    max-width: 500px;
+
+    margin: 35px auto;
+
+    padding: 30px 20px;
+
+    background: white;
+
+    border-radius: 15px;
+
+    text-align: center;
+
+    box-shadow:
+        0 5px 18px rgba(0, 0, 0, 0.12);
+
+    border: 2px solid #f59e0b;
+}
+
+
+.trofeo-final {
+    font-size: 55px;
+
+    margin-bottom: 10px;
+}
+
+
+.cam-peon h2 {
+    margin: 0 0 8px;
+
+    color: #b45309;
+}
+
+
+.cam-peon p {
+    margin: 0;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    color: #6b7280;
+}
+
+
+/* ==========================================
+   FOOTER
+   ========================================== */
+
+footer {
+    background: #111827;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 25px 15px;
+
+    margin-top: 30px;
+}
+
+
+footer p {
+    margin: 5px 0;
+
+    font-size: 14px;
+}
+
+
+/* ==========================================
+   RESPONSIVE - TABLET
+   ========================================== */
+
+@media (max-width: 900px) {
+
+    .eliminatoria-grid {
         grid-template-columns:
             repeat(2, 1fr);
-
-        gap: 6px;
-
     }
 
 
-    .menu button {
-
-        width: 100%;
-
-        padding: 12px 5px;
-
-        font-size: 13px;
-
+    .ronda-octavos .eliminatoria-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
     }
 
 
-    main {
-
-        padding: 18px 12px;
-
-    }
-
-
-    .titulo-seccion {
-
-        align-items: stretch;
-
-        flex-direction: column;
-
+    .ronda-cuartos .eliminatoria-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
     }
 
 
     .zonas-menu {
-
         grid-template-columns:
             repeat(2, 1fr);
+    }
 
+}
+
+
+/* ==========================================
+   RESPONSIVE - CELULAR
+   ========================================== */
+
+@media (max-width: 600px) {
+
+    body {
+        font-size: 14px;
     }
 
 
-    .eliminatoria-grid {
+    .header {
+        padding: 18px 10px;
+    }
 
-        grid-template-columns: 1fr;
 
+    .header-content {
+        gap: 10px;
+    }
+
+
+    .trofeo {
+        font-size: 36px;
+    }
+
+
+    .header h1 {
+        font-size: 20px;
+    }
+
+
+    .header p {
+        font-size: 15px;
+
+        letter-spacing: 1px;
+    }
+
+
+    .menu {
+        padding: 8px;
+
+        gap: 6px;
+    }
+
+
+    .menu button {
+        flex: 1 1 calc(50% - 6px);
+
+        min-width: 130px;
+
+        padding: 10px 8px;
+
+        font-size: 13px;
+    }
+
+
+    main {
+        padding: 20px 10px 35px;
+    }
+
+
+    .titulo-seccion {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+
+    .boton-actualizar {
+        width: 100%;
+    }
+
+
+    .card {
+        padding: 15px;
+
+        border-radius: 10px;
     }
 
 
     .parejas {
-
         font-size: 16px;
-
     }
 
 
-    .info span {
+    .info {
+        flex-direction: column;
 
+        gap: 7px;
+    }
+
+
+    .zonas-menu {
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 8px;
+    }
+
+
+    .zona-button {
+        padding: 11px 8px;
+
+        font-size: 13px;
+    }
+
+
+    .pareja-zona {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+
+    /*
+       ELIMINATORIAS EN CELULAR
+    */
+
+    .eliminatoria-grid,
+    .ronda-octavos .eliminatoria-grid,
+    .ronda-cuartos .eliminatoria-grid {
+        grid-template-columns: 1fr;
+
+        gap: 14px;
+    }
+
+
+    .ronda-semifinales .eliminatoria-grid {
+        grid-template-columns: 1fr;
+
+        max-width: none;
+    }
+
+
+    .eliminatoria {
         width: 100%;
 
+        padding: 15px;
     }
 
 
-    table {
+    .eliminatoria-pareja {
+        min-height: 42px;
 
-        min-width: 650px;
-
+        font-size: 14px;
     }
 
 
-    .tabla-container {
+    .ronda h3 {
+        font-size: 19px;
+    }
 
-        overflow-x: auto;
 
+    .octavos-directo {
+        padding: 15px;
+    }
+
+
+    .cam-peon {
+        padding: 25px 15px;
+    }
+
+
+    .trofeo-final {
+        font-size: 45px;
+    }
+
+}
+
+
+/* ==========================================
+   CELULARES MUY PEQUEÑOS
+   ========================================== */
+
+@media (max-width: 380px) {
+
+    .header h1 {
+        font-size: 18px;
+    }
+
+
+    .header p {
+        font-size: 13px;
+    }
+
+
+    .trofeo {
+        font-size: 30px;
+    }
+
+
+    .menu button {
+        min-width: 110px;
+
+        font-size: 12px;
+    }
+
+
+    .zonas-menu {
+        grid-template-columns: 1fr;
+    }
+
+
+    .partido .info {
+        font-size: 12px;
     }
 
 }
